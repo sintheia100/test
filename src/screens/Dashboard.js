@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const Dashboard = () => {
   const [translate, setTranslate] = useState("-50rem");
   const [width, setWidth] = useState("0rem");
@@ -72,7 +72,7 @@ const Dashboard = () => {
             class='fa fa-bars'
             aria-hidden='true'></i>
         </button>
-        <Outlet />
+        {/* <Outlet /> */}
       </div>
     </div>
   );

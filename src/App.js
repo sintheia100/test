@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HomePage from "./screens/HomePage";
 import Login from "./screens/Login";
 import Signup from "./screens/Signup";
@@ -18,14 +18,14 @@ const App = () => {
     <Router basename='/'>
       <Header />
       <hr className='header-divider' />
-      <Routes>
-        <Route path='/' component={<HomePage />} />
-        <Route path='/login' exact component={<Login />} />
+      <Switch>
+        <Route path='/' exact component={HomePage} />
+        <Route path='/login' exact component={Login} />
 
-        <Route path='/login/student' exact component={<StudentLogin />} />
-        <Route path='/login/instructor' exact component={<TeacherLogin />} />
-        <Route path='/signup' exact component={<Signup />} />
-        <Route path='/browse' exact component={<Browse />} />
+        <Route path='/login/student' exact component={StudentLogin} />
+        <Route path='/login/instructor' exact component={TeacherLogin} />
+        <Route path='/signup' exact component={Signup} />
+        <Route path='/browse' exact component={Browse} />
         {/* <Route path='browse/:id' component={<CoursePage />} />
         <Route path=':user' component={<Dashboard />}>
           <Route path='dashboard' component={<StudentDashboard />} />
@@ -36,7 +36,7 @@ const App = () => {
           />
         </Route>
         <Route path='instructor/dashboard' component={<TeacherDashboard />} /> */}
-      </Routes>
+      </Switch>
     </Router>
   );
 };

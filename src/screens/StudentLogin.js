@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { users } from "../data/users";
 import { GlobalContext } from "../context/GlobalContext";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 const StudentLogin = () => {
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [remember, setRemember] = React.useState(false);
   const { setIsLoggedIn } = useContext(GlobalContext);
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const params = useParams();
 
   const submitHandler = (e) => {
@@ -21,7 +21,7 @@ const StudentLogin = () => {
       setIsLoggedIn(true);
       localStorage.setItem("user", JSON.stringify(user[0]));
 
-      navigate(`../${user[0].userId}/dashboard`, { replace: true });
+      //navigate(`../${user[0].userId}/dashboard`, { replace: true });
     } else {
       setIsLoggedIn(false);
     }

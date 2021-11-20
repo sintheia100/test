@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState } from "react";
-import { Link, useParams, Outlet } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Course from "../components/Course";
 import { users } from "../data/users";
 import { GlobalContext } from "../context/GlobalContext";
@@ -50,7 +50,6 @@ const StudentDashboard = () => {
           </div>
         </div>
       </section>
-      <Outlet />
     </div>
   );
 };

@@ -1,16 +1,16 @@
 import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ChalkBoardLogo from "../assets/images/chalkboard.png";
 import { GlobalContext } from "../context/GlobalContext";
 const Header = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   const { isLoggedIn, setIsLoggedIn, mobile } = useContext(GlobalContext);
   const [display, setDisplay] = useState("none");
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   console.log(isLoggedIn);
   const loggedOutHandler = () => {
     setIsLoggedIn(false);
-    navigate("/");
+    //navigate("/");
   };
   const menuHandler = () =>
     setDisplay(() => (display === "none" ? "flex" : "none"));
@@ -25,7 +25,7 @@ const Header = () => {
           </Link>
           <Link
             style={{ display: mobile && "none" }}
-            to='browse'
+            to='/browse'
             className='links browse'>
             Browse Courses
           </Link>
@@ -35,12 +35,12 @@ const Header = () => {
           <div
             style={{ display: "flex", alignItems: "center" }}
             aria-label='SignIn and Signup Links'>
-            <Link to='login' className='button login'>
+            <Link to='/login' className='button login'>
               Login
             </Link>
             <Link
               style={{ display: mobile && "none" }}
-              to='signup'
+              to='/signup'
               className='button signup'>
               Signup
             </Link>
@@ -57,7 +57,7 @@ const Header = () => {
         ) : (
           <div>
             <div>
-              <span>{user.firstName + " " + user.lastName}</span>
+              {/* <span>{user.firstName + " " + user.lastName}</span> */}
               <button
                 style={{
                   border: "none",
