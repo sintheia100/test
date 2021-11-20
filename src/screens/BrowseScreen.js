@@ -31,7 +31,10 @@ const BrowseScreen = () => {
               title={course.title}
               info={course.info}
               instructors={course.instructors}
-              link={course.title}
+              link={`/browse/${course.title
+                .split(" ")
+                .join("-")
+                .toLowerCase()}`}
             />
           );
         })}

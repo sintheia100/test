@@ -26,7 +26,24 @@ const App = () => {
         <Route path='/login/instructor' exact component={TeacherLogin} />
         <Route path='/signup' exact component={Signup} />
         <Route path='/browse' exact component={Browse} />
-        {/* <Route path='browse/:id' component={<CoursePage />} />
+        <Route path='/browse/:id' exact component={CoursePage} />
+        <Route path='/:user/dashboard' exact component={StudentDashboard} />
+        {/* <Route path='/dashboard' exact component={StudentDashboard} /> */}
+        <Route
+          path='/:user/dashboard/assignments'
+          exact
+          component={AssignmentsPage}
+        />
+        <Route
+          path='/:user/assignments/:assignmentId'
+          exact
+          component={CourseAssignment}
+        />
+        <Route
+          path='/:user/instructor/dashboard'
+          component={TeacherDashboard}
+        />
+        {/* />
         <Route path=':user' component={<Dashboard />}>
           <Route path='dashboard' component={<StudentDashboard />} />
           <Route path='assignments' component={<AssignmentsPage />} />
