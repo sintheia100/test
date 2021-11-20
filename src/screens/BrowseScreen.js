@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Course from "../components/Course";
 import { courses } from "../data/courses";
+import { useLocation } from "react-router-dom";
 const BrowseScreen = () => {
   const [searchInput, setSearchInput] = useState("");
-  console.log(courses[0].title.split(" ").join("-"));
+  const location = useLocation();
   return (
     <div className=''>
       <div
@@ -31,7 +32,10 @@ const BrowseScreen = () => {
               title={course.title}
               info={course.info}
               instructors={course.instructors}
-              link={course.title}
+              link={`${location.pathname}/${course.title
+                .split(" ")
+                .join("-")
+                .toLowerCase()}`}
             />
           );
         })}

@@ -6,7 +6,6 @@ const CoursePage = () => {
   const { isLoggedIn, mobile } = useContext(GlobalContext);
 
   const { userId } = JSON.parse(localStorage.getItem("user"));
-  console.log(userId);
   const params = useParams();
   const course = courses.filter(
     (course) => course.title.split(" ").join("-").toLowerCase() === params.id

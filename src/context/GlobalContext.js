@@ -3,7 +3,7 @@ import { useMediaQuery } from "react-responsive";
 export const GlobalContext = createContext(() => null);
 
 const GlobalContextProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const mobile = useMediaQuery({
     maxWidth: "600px",
   });

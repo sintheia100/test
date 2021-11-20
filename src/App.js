@@ -26,6 +26,7 @@ const App = () => {
         <Route path='/login/instructor' exact component={TeacherLogin} />
         <Route path='/signup' exact component={Signup} />
         <Route path='/browse' exact component={Browse} />
+        <Route path='/browse/:id' component={CoursePage} />
         {/* <Route path='browse/:id' component={<CoursePage />} />
         <Route path=':user' component={<Dashboard />}>
           <Route path='dashboard' component={<StudentDashboard />} />
