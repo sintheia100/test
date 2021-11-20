@@ -33,6 +33,10 @@ const App = () => {
           exact
           component={AssignmentsPage}
         />
+        <Route
+          path='/:user/assignments/:assignmentId'
+          component={CourseAssignment}
+        />
         {/* <Route path='browse/:id' component={<CoursePage />} />
         <Route path=':user' component={<Dashboard />}>
           <Route path='dashboard' component={<StudentDashboard />} />
