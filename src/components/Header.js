@@ -24,13 +24,19 @@ const Header = () => {
             <img src={ChalkBoardLogo} alt='Chalkboard' className='logo-image' />
           </Link>
           <Link
-
-          
             style={{ display: mobile && "none" }}
             to='/browse'
             className='links browse'>
             Browse Courses
           </Link>
+          {isLoggedIn && (
+            <Link
+              style={{ display: mobile && "none" }}
+              to={`/${user.userId}/dashboard`}
+              className='links browse'>
+              Dashboard
+            </Link>
+          )}
         </div>
 
         {isLoggedIn === false ? (
