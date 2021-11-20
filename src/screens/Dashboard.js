@@ -72,7 +72,6 @@ const Dashboard = () => {
             class='fa fa-bars'
             aria-hidden='true'></i>
         </button>
-        {/* <Outlet /> */}
       </div>
     </div>
   );
