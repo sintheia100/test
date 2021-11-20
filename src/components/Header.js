@@ -1,16 +1,16 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import ChalkBoardLogo from "../assets/images/chalkboard.png";
 import { GlobalContext } from "../context/GlobalContext";
 const Header = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   const { isLoggedIn, setIsLoggedIn, mobile } = useContext(GlobalContext);
   const [display, setDisplay] = useState("none");
-  //const navigate = useNavigate();
+  const navigate = useHistory();
   console.log(isLoggedIn);
   const loggedOutHandler = () => {
     setIsLoggedIn(false);
-    //navigate("/");
+    navigate.push("/");
   };
   const menuHandler = () =>
     setDisplay(() => (display === "none" ? "flex" : "none"));

@@ -1,11 +1,32 @@
-import React, { useState } from "react";
-
+import React, { useContext, useState } from "react";
+import { users } from "../data/users";
+import { GlobalContext } from "../context/GlobalContext";
+import { useParams, useHistory } from "react-router-dom";
 const TeacherLogin = () => {
-  const [input, setInput] = useState({
-    email: "",
-    password: "",
-    remember: false,
-  });
+  const { isLogggedIn, setIsLoggedIn } = useContext(GlobalContext);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(false);
+  const navigate = useHistory();
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    const user = users.filter(
+      (user) =>
+        user.email === email &&
+        user.password === password &&
+        user.instructor === true
+    );
+    console.log(user);
+    if (user.length === 1) {
+      setIsLoggedIn(true);
+      localStorage.setItem("user", JSON.stringify(users[0]));
+
+      navigate.push(`/${user[0].userId}/instructor/dashboard`);
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
 
   return (
     <div className='login-page'>
@@ -18,11 +39,11 @@ const TeacherLogin = () => {
           <input
             className='login-input'
             required
-            value={input.email}
+            value={email}
             type='email'
             name='email'
             id='email'
-            onChange={(e) => setInput({ email: e.target.value })}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder={"Email"}
           />
         </div>
@@ -35,8 +56,8 @@ const TeacherLogin = () => {
             type='password'
             name='password'
             id='password'
-            value={input.password}
-            onChange={(e) => setInput({ password: e.target.value })}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             className='login-input'
             placeholder={"Password"}
           />
@@ -52,15 +73,20 @@ const TeacherLogin = () => {
           <input
             style={{ marginRight: "1rem" }}
             type='checkbox'
-            checked={input.remember}
-            onChange={() => setInput({ remember: !input.remember })}
+            checked={remember}
+            onChange={() => setRemember(!remember)}
             id='remember'
           />
 
           <label htmlFor='remember'>Remeber me</label>
         </div>
 
-        <input className='button login-submit ' type='submit' value='Login' />
+        <input
+          onClick={submitHandler}
+          className='button login-submit '
+          type='submit'
+          value='Login'
+        />
       </form>
     </div>
   );

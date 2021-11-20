@@ -37,6 +37,10 @@ const App = () => {
           path='/:user/assignments/:assignmentId'
           component={CourseAssignment}
         />
+        <Route
+          path='/:user/instructor/dashboard'
+          component={TeacherDashboard}
+        />
         {/* <Route path='browse/:id' component={<CoursePage />} />
         <Route path=':user' component={<Dashboard />}>
           <Route path='dashboard' component={<StudentDashboard />} />
