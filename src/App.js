@@ -19,23 +19,23 @@ const App = () => {
       <Header />
       <hr className='header-divider' />
       <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='login' element={<Login />} />
+        <Route path='/' component={<HomePage />} />
+        <Route path='/login' exact component={<Login />} />
 
-        <Route path='login/student' element={<StudentLogin />} />
-        <Route path='login/instructor' element={<TeacherLogin />} />
-        <Route path='signup' element={<Signup />} />
-        <Route path='browse' element={<Browse />} />
-        <Route path='browse/:id' element={<CoursePage />} />
-        <Route path=':user' element={<Dashboard />}>
-          <Route path='dashboard' element={<StudentDashboard />} />
-          <Route path='assignments' element={<AssignmentsPage />} />
+        <Route path='/login/student' exact component={<StudentLogin />} />
+        <Route path='/login/instructor' exact component={<TeacherLogin />} />
+        <Route path='/signup' exact component={<Signup />} />
+        <Route path='/browse' exact component={<Browse />} />
+        {/* <Route path='browse/:id' component={<CoursePage />} />
+        <Route path=':user' component={<Dashboard />}>
+          <Route path='dashboard' component={<StudentDashboard />} />
+          <Route path='assignments' component={<AssignmentsPage />} />
           <Route
             path='assignments/:assignmentId'
-            element={<CourseAssignment />}
+            component={<CourseAssignment />}
           />
         </Route>
-        <Route path='instructor/dashboard' element={<TeacherDashboard />} />
+        <Route path='instructor/dashboard' component={<TeacherDashboard />} /> */}
       </Routes>
     </Router>
   );
