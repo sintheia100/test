@@ -5,7 +5,7 @@ import { GlobalContext } from "../context/GlobalContext";
 const CoursePage = () => {
   const { isLoggedIn, mobile } = useContext(GlobalContext);
 
-  const { userId } = JSON.parse(localStorage.getItem("user"));
+  const user = JSON.parse(localStorage.getItem("user"));
   const params = useParams();
   const course = courses.filter(
     (course) => course.title.split(" ").join("-").toLowerCase() === params.id
@@ -48,7 +48,7 @@ const CoursePage = () => {
         <h2>Course Sylabbus</h2>
         <p>{course.syllabus}</p>
       </section>
-      {isLoggedIn === true && (
+      {isLoggedIn && user !== null && (
         <div>
           <section>
             <h2>Course Content</h2>
@@ -103,7 +103,7 @@ const CoursePage = () => {
                   }}>
                   Assignment 2
                   <Link
-                    to={`../${userId}/assignments/${course.id}`}
+                    to={`/${user.userId || ""}/assignments/${course.id}`}
                     style={{
                       fontWeight: "400",
                       marginLeft: "1rem",
