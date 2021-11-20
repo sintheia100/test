@@ -5,8 +5,8 @@ import { GlobalContext } from "../context/GlobalContext";
 const CoursePage = () => {
   const { isLoggedIn, mobile } = useContext(GlobalContext);
 
-  const user = JSON.parse(localStorage.getItem("user"));
-
+  const { userId } = JSON.parse(localStorage.getItem("user"));
+  console.log(userId);
   const params = useParams();
   const course = courses.filter(
     (course) => course.title.split(" ").join("-").toLowerCase() === params.id
@@ -104,7 +104,7 @@ const CoursePage = () => {
                   }}>
                   Assignment 2
                   <Link
-                    to={`/${user.userId || ""}/assignments/${course.id}`}
+                    to={`../${userId}/assignments/${course.id}`}
                     style={{
                       fontWeight: "400",
                       marginLeft: "1rem",

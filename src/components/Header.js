@@ -1,15 +1,16 @@
 import React, { useContext, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ChalkBoardLogo from "../assets/images/chalkboard.png";
 import { GlobalContext } from "../context/GlobalContext";
 const Header = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   const { isLoggedIn, setIsLoggedIn, mobile } = useContext(GlobalContext);
   const [display, setDisplay] = useState("none");
-  const navigate = useHistory();
+  //const navigate = useNavigate();
+  console.log(isLoggedIn);
   const loggedOutHandler = () => {
     setIsLoggedIn(false);
-    navigate.push("/");
+    //navigate("/");
   };
   const menuHandler = () =>
     setDisplay(() => (display === "none" ? "flex" : "none"));
@@ -23,19 +24,13 @@ const Header = () => {
             <img src={ChalkBoardLogo} alt='Chalkboard' className='logo-image' />
           </Link>
           <Link
+
+          
             style={{ display: mobile && "none" }}
             to='/browse'
             className='links browse'>
             Browse Courses
           </Link>
-          {isLoggedIn && (
-            <Link
-              style={{ display: mobile && "none" }}
-              to={`/${user.userId}/dashboard`}
-              className='links browse'>
-              Dashboard
-            </Link>
-          )}
         </div>
 
         {isLoggedIn === false ? (

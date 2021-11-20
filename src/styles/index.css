@@ -263,10 +263,9 @@ h4,h5,h6{
 }
 
 .course-content{
-    width: 100%;
-    display: block;
-    overflow: hidden;
-          
+    width: 80%;
+          overflow-x: hidden;
+          overflow-y : scroll;
 }
 
 .course-content::-webkit-scrollbar{

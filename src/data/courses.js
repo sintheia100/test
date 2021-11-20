@@ -4,49 +4,6 @@ export const courses = [
     title: "Intro to Codeing",
     courseUrl: "",
     imgUrl: "",
-    content: [
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-    ],
     instructors: ["Jeremy Clarke", "Emma Watson"],
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quae.",
     syllabus:
@@ -56,49 +13,6 @@ export const courses = [
     id: "7834jksdjk05EDx",
     title: "Intro to Codeing",
     courseUrl: "",
-    content: [
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-    ],
     imgUrl: "",
     instructors: ["Jeremy Clarke", "Emma Watson"],
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quae.",
@@ -109,49 +23,6 @@ export const courses = [
     id: "78340dfdfiioas5EDx",
     title: "Intro to UI UX Design",
     courseUrl: "",
-    content: [
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-    ],
     imgUrl: "https://img-c.udemycdn.com/course/240x135/950390_270f_3.jpg",
     instructors: ["Jeremy Clarke", "Emma Watson"],
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quae.",
@@ -163,49 +34,6 @@ export const courses = [
     title: "Intro to Codeing",
     courseUrl: "",
     imgUrl: "",
-    content: [
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-
-      {
-        id: 1,
-        title: "Lecture 1",
-        link: "https://www.youtube.com/watch?v=NNnIGh9g6fA",
-      },
-      {
-        id: 2,
-        title: "Lecture 2",
-        link: "https://www.youtube.com/watch?v=cF6YkH-8vFk",
-      },
-    ],
     instructors: ["Jeremy Clarke", "Emma Watson"],
     info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, quae.",
   },
