@@ -29,10 +29,10 @@ const Header = () => {
             className='links browse'>
             Browse Courses
           </Link>
-          {isLoggedIn && (
+          {isLoggedIn && user !== null && (
             <Link
               style={{ display: mobile && "none" }}
-              to={`/${user.userId}/dashboard`}
+              to={`/${user.userId || ""}/dashboard`}
               className='links browse'>
               Dashboard
             </Link>
